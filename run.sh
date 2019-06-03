@@ -139,6 +139,10 @@ if [ $# -eq 0 -o "$1" = "-h" ]; then
     exit 1
 fi
 
+if [ ! -d $ROOT_DIR/metrics ]; then
+    mkdir $ROOT_DIR/metrics
+fi
+
 if [ $# -eq 1 -a "$1" = "all" ]; then
     tests="1 2 3 5 6 7 8"
     echo "Starting run all tests..."
