@@ -501,9 +501,9 @@ public class HugeGraphCoreDatabase extends GraphDatabaseBase<
         // Clear graph if needed
         if (needClear) {
             graph.clearBackend();
+            // Init backend
+            graph.initBackend();
         }
-        // Init backend
-        graph.initBackend();
 
         return graph;
     }

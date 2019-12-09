@@ -133,9 +133,8 @@ if [ $# -eq 0 -o "$1" = "-h" ]; then
     echo "11    network50000"
     echo "all   represent all test_number that can pass currently"
     echo ""
-    echo "Currently tests with test-number [1,2,3,5,6,7,8] can pass"
-    echo "Test 4 will cause OOM when using titan and hugegraphcore"
-    echo "and tests [9,10,11,12] will cost more than 3 hours when using titan"
+    echo "Currently tests with test-number [1,2,3,4,5,6,7,8] can pass"
+    echo "Tests [9,10,11,12] will cost more than 3 hours when using titan"
     exit 1
 fi
 
@@ -144,7 +143,7 @@ if [ ! -d $ROOT_DIR/metrics ]; then
 fi
 
 if [ $# -eq 1 -a "$1" = "all" ]; then
-    tests="1 2 3 5 6 7 8"
+    tests="1 2 3 4 5 6 7 8"
     echo "Starting run all tests..."
     for i in $tests;
     do
